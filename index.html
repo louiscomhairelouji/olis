@@ -64,7 +64,7 @@ p{color:var(--soft)}
 :focus-visible{outline:2.5px solid var(--orange-deep);outline-offset:2px;border-radius:4px}
 
 /* ---------- Buttons ---------- */
-.btn{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:999px;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:9px;padding:13px 24px;border-radius:999px;font-family:'Poppins',sans-serif;font-size:.95rem;font-weight:600;text-decoration:none;border:none;cursor:pointer;transition:transform .18s ease,background .18s ease,box-shadow .18s ease}
 .btn:hover{transform:translateY(-1px)}
 .btn-primary{background:var(--orange);color:#3A2517}
 .btn-primary:hover{background:var(--orange-deep);box-shadow:0 10px 24px rgba(224,116,64,.28)}
@@ -95,8 +95,8 @@ body.menu-open .burger span:nth-child(3){transform:translateY(-7.5px) rotate(-45
 .mobile-menu{display:none;position:fixed;inset:74px 0 0 0;background:var(--beige);z-index:49;padding:30px 24px calc(44px + env(safe-area-inset-bottom));overflow:auto}
 body.menu-open .mobile-menu{display:block}
 body.menu-open{overflow:hidden}
-.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:4px}
-.mobile-menu a{display:block;text-decoration:none;font-family:'Poppins',sans-serif;font-size:1.25rem;font-weight:500;padding:11px 0;border-bottom:1px solid var(--line);color:var(--ink)}
+.mobile-menu ul{list-style:none;display:flex;flex-direction:column;gap:6px}
+.mobile-menu a{display:block;text-decoration:none;font-family:'Poppins',sans-serif;font-size:1.25rem;font-weight:500;padding:13px 0;border-bottom:1px solid var(--line);color:var(--ink)}
 .mobile-menu .btn{margin-top:26px;justify-content:center;width:100%}
 
 /* ---------- Grids & cards ---------- */
@@ -114,7 +114,7 @@ body.menu-open{overflow:hidden}
 /* ---------- Hero ---------- */
 .hero{padding:clamp(64px,9vw,112px) 0 clamp(40px,6vw,64px)}
 .hero .lead{margin:18px auto 30px}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .hero-note{margin-top:26px;font-size:.86rem;color:#8A8271;letter-spacing:.02em}
 .hero-note span{margin:0 10px}
 .duo{display:grid;grid-template-columns:1.25fr 1fr;gap:22px;align-items:end;margin-top:clamp(36px,5vw,56px)}
@@ -141,7 +141,7 @@ body.menu-open{overflow:hidden}
 .band .quote em{color:#F2C9AE;font-style:italic}
 .cta-card{background:var(--olive-tint);border:1px solid #DFE4C8;border-radius:var(--r-l);padding:clamp(36px,5vw,56px);text-align:center}
 .cta-card p{max-width:34em;margin:0 auto 26px}
-.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 
 /* ---------- Product cards ---------- */
 .prod{background:#FFFDF8;border:1px solid var(--line);border-radius:var(--r-m);overflow:hidden;display:flex;flex-direction:column;box-shadow:var(--shadow)}
@@ -183,7 +183,7 @@ body.menu-open{overflow:hidden}
 .check-list li::after{content:"";position:absolute;left:5px;top:11.5px;width:6px;height:3.5px;border-left:1.8px solid var(--olive-deep);border-bottom:1.8px solid var(--olive-deep);transform:rotate(-45deg)}
 
 /* ---------- FAQ ---------- */
-.faq details{background:#FFFDF8;border:1px solid var(--line);border-radius:var(--r-s);margin-bottom:12px;overflow:hidden}
+.faq details{background:#FFFDF8;border:1px solid var(--line);border-radius:var(--r-s);margin-bottom:14px;overflow:hidden}
 .faq summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:600;font-size:1rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
 .faq summary::-webkit-details-marker{display:none}
 .faq summary::after{content:"+";font-family:'Poppins',sans-serif;font-size:1.4rem;font-weight:300;color:var(--orange-deep);line-height:1;flex-shrink:0;transition:transform .2s}
@@ -276,6 +276,10 @@ footer{background:var(--olive-dark);color:#EDE9DA;margin-top:0}
   .faq summary{padding:16px 18px;font-size:.95rem}
   .faq details p{padding:0 18px 18px}
   .form-card{padding:26px 18px}
+  .form-card .btn{width:100%}
+  .prod-foot{flex-direction:column;align-items:stretch;gap:12px}
+  .prod-foot .avail{text-align:center}
+  .prod-foot .btn{width:100%}
   .f-top{padding:44px 0 34px;gap:26px}
   .f-bottom{flex-direction:column;align-items:flex-start;gap:6px;padding:18px 0 24px}
 }
@@ -399,8 +403,8 @@ footer{background:var(--olive-dark);color:#EDE9DA;margin-top:0}
         <div class="ph-frame r"><img style="aspect-ratio:1/1" data-img="banane" alt="Pudding de chia banane — Kitchen by OLIS"></div>
         <div class="ph-frame r"><img style="aspect-ratio:1/1" data-img="granola" alt="Yaourt, granola maison et chocolat noir — Kitchen by OLIS"></div>
       </div>
-      <div class="center mt-40 r">
-        <a class="btn btn-primary" href="#/devis">Demander un devis</a>&nbsp;&nbsp;
+      <div class="cta-actions mt-40 r">
+        <a class="btn btn-primary" href="#/devis">Demander un devis</a>
         <a class="btn btn-outline" href="#/catalogue">Voir le catalogue</a>
       </div>
     </div>
